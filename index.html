@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NY Times Search</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- font-awesome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!-- jquery link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+      * {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        id="header"
+        class="display-3 text-center my-4 bg-dark py-4 text-light"
+      >
+        <h1>New York Times Search</h1>
+      </div>
+      <div id="searchParameters" class="border">
+        <h3 class="bg-primary text-dark text-center py-1 my-2 mx-2">
+          Search Parameters
+        </h3>
+        <div class="form-group w-50 ml-2">
+          <label for="searchTerm" class="mb-1">Search Term</label>
+          <input
+            type="text"
+            class="form-control"
+            name="searchTerm"
+            id="search_term"
+            aria-describedby="helpId"
+            placeholder="Enter a keyword"
+          />
+        </div>
+        <div class="form-group w-50 ml-2">
+          <label for="numberRecords" class="mb-1"
+            >Number of Articles to Retrieve</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numberRecords"
+            id="num_of_records"
+            aria-describedby="helpId"
+            min="1"
+            max="10"
+            placeholder="1"
+          />
+        </div>
+        <div class="form-group w-50 ml-2">
+          <label for="startYear" class="mb-1">Start Year (Optional)</label>
+          <input
+            type="number"
+            class="form-control"
+            name="startYear"
+            id="start_year"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group w-50 ml-2">
+          <label for="endYear" class="mb-1">End Year (Optional)</label>
+          <input
+            type="number"
+            class="form-control"
+            name="endYear"
+            id="end_year"
+            placeholder=""
+          />
+        </div>
+        <button
+          id="searchBtn"
+          type="button"
+          class="btn btn-primary fa fa-search mb-2 ml-2"
+        >
+          Search
+        </button>
+        <button
+          id="clear"
+          type="button"
+          class="btn btn-primary fa fa-trash mb-2 ml-2"
+        >
+          Clear
+        </button>
+      </div>
+      <br />
+      <div id="topArticles" class="border">
+        <h3 class="bg-primary text-dark text-center py-1 my-2 mx-2">
+          Top articles
+        </h3>
+      </div>
+    </div>
+    <!-- Bootstrap Javascript -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/search.js"></script>
+  </body>
+</html>
