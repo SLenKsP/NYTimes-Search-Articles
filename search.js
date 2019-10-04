@@ -43,15 +43,24 @@ $(document).ready(function() {
     var endDate = endYear + "1231";
     console.log(endDate);
     apiKey = "M7K7JmRxGczz6LEtiowoK0hL4qlXMOBA";
-    queryUrl =
-      "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
-      searchedText +
-      "&begin_date=" +
-      beginDate +
-      "&end_date=" +
-      endDate +
-      "&api-key=" +
-      apiKey;
+    if (startYear === "" && endYear === "") {
+      queryUrl =
+        "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+        searchedText +
+        "&api-key=" +
+        apiKey;
+    } else {
+      queryUrl =
+        "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+        searchedText +
+        "&begin_date=" +
+        beginDate +
+        "&end_date=" +
+        endDate +
+        "&api-key=" +
+        apiKey;
+    }
+
     console.log(queryUrl);
     $.ajax({
       type: "GET",
